@@ -1,26 +1,26 @@
-Executar no Matlab o script sonometro.m e passar como parametro o sinal a ser analisado.
-
+Run sonometro.m on matlab and pass as argument the signal to be analised
 
 Ex:
->>sonometro('sinal_a_ser_analisado.wav');
+>>sonometro('sign_to_be_analised.wav');
 
 
-Será impresso no console do Matlab o valor LEQ do sinal a ser analisado.
+SerÃ¡ impresso no console do Matlab o valor LEQ do sinal a ser analisado.
+It will be printed on matlab console the LEQ value of the signal thas is going to be analysed
 
-Serão abertas 8 figuras na tela:
+Matlab will open 8 figures:
 
-Figura 1 - Plot do sinal a ser analisado no tempo
+Figure 1 - Time plot of the signal
 
-Figura 2 - Plot do espectro do sinal a ser analisado
+Figure 2 - Spectrum plot of the signal
 
-Figura 3 - Plot da curva que será utilizada para o A-weighting
+Figure 3 - A-curve plot
 
-Figura 4 - Plot do sinal a ser analisado antes e depois do filtro A
+Figure 4 - Signal plot before and after the A-weighting
 
-Figura 5 - Plot dos valores lineares de energia do sinal filtrado
+Figure 5 - Energy plot of the A-weighted signal
 
-Figura 6 - Plot dos valores em dB da energia do sinal filtrado
+Figure 6 - Energy plot of the A-weighted signal in dB scale
 
-Figura 7 - Plot da curva LAS
+Figure 7 - LAS plot
 
-Figura 8 - Plot do espectro de terço de oitava do sinal filtrado
+Figure 8 - Third octave signal plot
