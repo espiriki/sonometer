@@ -1,11 +1,10 @@
-Run sonometro.m on matlab and pass as argument the signal to be analised
+Run sonometro.m on matlab and pass as the argument the signal to be analised
 
 Ex:
 >>sonometro('sign_to_be_analised.wav');
 
 
-Será impresso no console do Matlab o valor LEQ do sinal a ser analisado.
-It will be printed on matlab console the LEQ value of the signal thas is going to be analysed
+It will be printed on Matlab console the LEQ value of the signal that is going to be analysed
 
 Matlab will open 8 figures:
 
