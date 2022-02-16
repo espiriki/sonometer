@@ -2,11 +2,11 @@ function [] = media_temporal (energia_sinal_analise, eixo_x_tempo)
 
     fs=44100;
     pressao_referencia=20e-6;
-    %Criando os coeficientes do filtro de média temporal com a curva x(t) = e^(-t/tau)
+    %Criando os coeficientes do filtro de mÃ©dia temporal com a curva x(t) = e^(-t/tau)
     tau = 1;
     alfa = exp(-1/(tau*fs));
 
-    %Aplicando o filtro ao sinal de energia usando a relação
+    %Aplicando o filtro ao sinal de energia usando a relaÃ§Ã£o
     % y[n] = energia[n] + alfa * energia[n-1]
     curva_LAS(1) = energia_sinal_analise(1);
     for i=2:length(energia_sinal_analise)
@@ -22,7 +22,7 @@ function [] = media_temporal (energia_sinal_analise, eixo_x_tempo)
    plot(eixo_x_tempo,curva_LAS); 
    title('Valor LAS');
    xlabel('Tempo (s)');
-   ylabel('Nível (dB)')
+   ylabel('NÃ­vel (dB)')
    grid on;
    
    
