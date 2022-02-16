@@ -15,28 +15,28 @@ function [espectro] = espectro_terco_oitava (espectro_sinal_analise_ponderado_cu
 
 		F_superior = 2 ^ (1/3) * F_inferior;
 
-        %tmp é um vetor com valores que indicam a diferença (absoluta) de
-        %todos os valores de frequência da FFT para o valor buscado (no caso o valor inferior
+        %tmp Ã© um vetor com valores que indicam a diferenÃ§a (absoluta) de
+        %todos os valores de frequÃªncia da FFT para o valor buscado (no caso o valor inferior
         %de frequencia da banda N)
         tmp = abs(frequencia - F_inferior);
-        %idx vai conter o indíce do valor mais próximo, que é o indice da
-        %menor diferença absoluta
+        %idx vai conter o indÃ­ce do valor mais prÃ³ximo, que Ã© o indice da
+        %menor diferenÃ§a absoluta
         [idx idx] = min(tmp);
         
         %Isso serve para que um mesmo valor de amplitude de uma determinada
-        %frequencia NÃO seja usada no cálculo do valor de 2 bandas diferentes
+        %frequencia NÃƒO seja usada no cÃ¡lculo do valor de 2 bandas diferentes
         if (N~=1)
             indice_frequencia_inferior_da_banda = idx + 1;
         else
             indice_frequencia_inferior_da_banda = idx;
         end
             
-        %tmp é um vetor com valores que indicam a diferença (absoluta) de
-        %todos os valores de frequência da FFT para o valor buscado (no
+        %tmp Ã© um vetor com valores que indicam a diferenÃ§a (absoluta) de
+        %todos os valores de frequÃªncia da FFT para o valor buscado (no
         %caso o valor superior da banda N)
         tmp = abs(frequencia - F_superior);
-        %idx vai conter o indíce do valor mais próximo, que é o indice da
-        %menor diferença absoluta
+        %idx vai conter o indÃ­ce do valor mais prÃ³ximo, que Ã© o indice da
+        %menor diferenÃ§a absoluta
         [idx idx] = min(tmp);
         
         indice_frequencia_superior_da_banda = idx;
