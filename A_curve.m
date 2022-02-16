@@ -1,6 +1,6 @@
 function [curva_A] = curva_A(frequencia)
 
-    %Coeficientes da equaÁ„o que gera a curva A
+    %Coeficientes da equa√ß√£o que gera a curva A
     coeff_1 = 12200^2 * frequencia .^ 4;
     coeff_2 = frequencia .^ 2 + 20.6 ^ 2;
     coeff_3 = frequencia .^ 2 + 107.7 ^ 2;
@@ -11,16 +11,16 @@ function [curva_A] = curva_A(frequencia)
     curva_A = (coeff_1) ./ ( (coeff_2) .* sqrt( (coeff_3) .* (coeff_4) ) .* (coeff_5) );
     curva_A = curva_A * 10 ^ (2/20);
 
-    %Essa vari·vel vai ser usada somente para plotar a curva e verificar
-    %que a mesma est· certa
+    %Essa vari√°vel vai ser usada somente para plotar a curva e verificar
+    %que a mesma est√° certa
     Curva_A_log = 2 + 20 * log10(curva_A);
     
-    %Plotando a curva de ponderaÁ„o A (A-weighting)
+    %Plotando a curva de pondera√ß√£o A (A-weighting)
     figure();
     semilogx(frequencia,Curva_A_log);
-    title('Curva A de ponderaÁ„o');
+    title('Curva A de pondera√ß√£o');
     xlabel('Frequencia (Hz)');
-    ylabel('Fator de atenuaÁ„o (dB)');
+    ylabel('Fator de atenua√ß√£o (dB)');
     grid on;
 
 
